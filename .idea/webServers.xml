@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="24efe258-0a70-4008-aa52-0ffd0c98427d" name="zype-test" url="http://ec2-54-191-112-237.us-west-2.compute.amazonaws.com">
+        <fileTransfer host="ec2-54-191-112-237.us-west-2.compute.amazonaws.com" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/home/scott/dev/zype/zype-test" accessType="SFTP" username="scott" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
