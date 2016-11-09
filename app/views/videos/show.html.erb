@@ -1,0 +1,12 @@
+<h2>Zype Video Player</h2> <a href="/"> <i> << back to list</i></a><br>
+
+<% if @access_token -%>
+  <div id="zype_<%= @video_id %>"></div><script
+  src="https://player.zype.com/embed/<%= @video_id %>.js?autoplay=true&access_token=<%= @access_token %>"
+  type="text/javascript"></script>
+<% else -%>
+    <div id="zype_<%= @video_id %>"></div><script
+src="https://player.zype.com/embed/<%= @video_id %>.js?autoplay=true&app_key=<%= @app_key %>"
+type="text/javascript"></script>
+
+<% end -%>

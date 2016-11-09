@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+
+  root 'videos#list'
+
+  get 'users/login'
+  #get 'users/authenticate'
+  post 'users/authenticate'
+  get 'videos/list'
+
+  get 'login'              => 'users#login'
+  get 'login/:error'       => 'users#login'
+  get 'videos/show/:id'    => 'videos#show'
+  get 'users/login/:error' => 'users#login'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,19 @@
+<h1>Zype Coding Challenge</h1>
+
+<table>
+  <tr>
+    <th>Thumbnail</th>
+    <th align="left">Title</th>
+  </tr>
+
+  <% @videos.each do |video| %>
+      <tr>
+        <td><img src="<%= video[:thumb] %>"></td>
+        <% if video[:subreq] && !@logged_in -%>
+            <td><a href="/login?video_id=<%= video[:video_id] %>"><i><%= video[:title] %></i></a></td>
+        <% else -%>
+            <td><a href="/videos/show/<%= video[:video_id] %>"><%= video[:title] %></a></td>
+        <% end -%>
+      </tr>
+  <% end %>
+</table>

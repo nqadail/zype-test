@@ -1,0 +1,20 @@
+<h2>Login to see this video</h2>
+
+
+<% if params[:error] %>
+    <h2>Error: Invalid login.</h2>
+<% end %>
+
+<%= form_tag :action => :authenticate do %>
+
+    <%= label_tag :user, 'Username: ' %><br>
+    <%= text_field_tag :user %><br>
+
+    <%= label_tag :password, 'Password: ' %><br>
+    <%= password_field_tag :password %><br>
+
+    <%= submit_tag 'Login' %>
+
+<% end %>
+
+
